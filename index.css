@@ -11,7 +11,7 @@
     border-radius: 2px;
       box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
       overflow: hidden;
-    background: #fff;
+    background:#165954;
     color: #333;
       font-family: 'Open Sans', Helvetica, sans-serif;
       -webkit-font-smoothing: antialiased;
@@ -19,9 +19,95 @@
   }
   
   .center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+   	position: absolute;
+	width: 220px;
+	height: 220px;
+	top: 90px;
+	left: 90px;
+    
+
   }
   
+  .part-1{
+    background-color: #776177bd;
+    position: absolute;
+    width: 30px;
+	height: 30px;
+	top: 95px;
+	left: 95px;
+    border-radius:12px;
+    z-index: 3;
+    animation-fill-mode:both ;
+    animation: load-action-1 2s cubic-bezier(.21,.98,.6,.99) 1s alternate infinite;
+    /* animation: load-action-1 2s ease-in-out  0s alternate infinite; */
+  }
+
+  .part-2{
+    background-color: #776177bd;
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    z-index: 2;
+    animation-fill-mode:both ;
+    animation: load-action-2 2s cubic-bezier(.21,.98,.6,.99) 2s alternate infinite;
+    /* animation: load-action-3 2s ease-in-out 0s alternate infinite; */
+  }
+  
+  .part-3{
+    background-color: #776177bd;
+    position: absolute;
+    top: 65px;
+    left: 65px;
+    width: 90px;
+    height: 90px;
+    border-radius: 12px;
+    animation-fill-mode:both ;
+    animation: load-action-3 2s cubic-bezier(.21,.98,.6,.99) 1s alternate infinite;
+    /* animation: load-action-3 2s ease-in-out 0s alternate infinite; */
+    z-index:1;
+
+  }
+
+  /* defines animation  */
+
+  @keyframes load-action-1{
+    0%{
+        box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.2);
+    
+        transform: scale(0);
+
+    }
+    100%{
+        box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3);
+        transform:scale(2) ;
+    }
+  }
+
+  @keyframes load-action-2{
+    0%{
+        box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.2);
+    
+        transform: scale(0);
+
+    }
+    100%{		
+        box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3);
+    
+        transform:scale(2) ;
+    }
+  }
+  @keyframes load-action-3{
+    0%{
+        box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.2);
+    
+        transform: scale(0);
+
+    }
+    100%{
+        box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3);
+        transform:scale(2) ;
+    }
+  }
